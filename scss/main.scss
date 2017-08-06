@@ -17,8 +17,8 @@ html {
 
 h1 {
   font-family: $font-family-display;
-  font-size: 3em;
-  // line-height: 85px;
+  font-size: 8.313em;
+  line-height: 7.063em;
 }
 
 h2 {
@@ -38,7 +38,8 @@ p {
   font-size: 1em;
   line-height: 1.375em;
 }
-.fade-in{
+
+.fade-in {
   opacity: 0;
 }
 
@@ -260,8 +261,8 @@ p {
   flex-direction: row;
   justify-content: center;
 
-  & a:hover{
-    opacity: .75;
+  & a:hover {
+    opacity: 0.75;
   }
 }
 
@@ -271,14 +272,14 @@ p {
   flex-direction: row;
   justify-content: space-around;
 
-  & .active{
+  & .active {
     background-color: $red;
   }
-  & li{
+
+  & li {
     background-color: $white;
     border: none;
   }
-
 }
 
 .slide-number-indicator {
