@@ -7,25 +7,23 @@ gulp.task('hello', function() {
 });
 
 gulp.task('sass', function() {
-  return gulp.src('./src/scss/*.scss')
+  return gulp.src('./scss/*.scss')
     .pipe(sass()) //using gulp-sass
-    .pipe(gulp.dest('./src/css'))
+    .pipe(gulp.dest('./css'))
     .pipe(browserSync.reload({
       stream: true
     }))
 });
 
 gulp.task('watch', ['browser-sync', 'sass'], function() {
-  gulp.watch('./src/scss/*.scss', ['sass']);
-  gulp.watch('./src/*.html', browserSync.reload);
-  gulp.watch('./src/**/*.js', browserSync.reload);
+  gulp.watch('./scss/*.scss', ['sass']);
+  gulp.watch('./*.html', browserSync.reload);
+  gulp.watch('./**/*.js', browserSync.reload);
 // add other watches here
 });
 
 gulp.task('browser-sync', function() {
   browserSync.init({
-    server: {
-      baseDir: 'src'
-    },
+    server: true,
   })
 });

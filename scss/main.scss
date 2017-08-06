@@ -1,0 +1,447 @@
+@import './../node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss';
+@import 'base/module.scss';
+@import 'components/module.scss';
+@import 'utils/module.scss';
+@import 'vendor/module.scss';
+
+body {
+  background-color: $white;
+  height: 100%;
+  color: white;
+}
+
+html {
+  font-family: $font-family-text;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: $font-family-display;
+  font-size: 3em;
+  // line-height: 85px;
+}
+
+h2 {
+  font-family: $font-family-display;
+  font-size: 2.25em;
+  line-height: 1.25em;
+}
+
+h3 {
+  font-family: $font-family-display;
+  font-size: 1.75em;
+  line-height: 1.25em;
+}
+
+p {
+  font-family: $font-family-text;
+  font-size: 1em;
+  line-height: 1.375em;
+}
+.fade-in{
+  opacity: 0;
+}
+
+.col-md-3,
+.col-md-4,
+.col-md-6 {
+  margin-bottom: 20px;
+}
+
+.main-content {
+  background: $orange;
+}
+
+.section {
+  padding-bottom: 40px;
+}
+
+.btn-garces {
+  color: $white;
+  text-decoration: none;
+  padding: 5px 10px;
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.about {
+  background-color: $orange;
+  position: relative;
+  padding-top: 40px;
+
+  & h2 {
+    color: $red;
+  }
+
+  & .btn-garces {
+    background-color: $red;
+
+    &:hover {
+      background-color: lighten($red, 10%);
+    }
+  }
+
+  & h1 {
+    position: relative;
+  }
+
+  & h1::before {
+    content: url("../images/Rectangle.png");
+    position: absolute;
+    top: -50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 25px solid $orange;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: $orange;
+    border-bottom-color: transparent;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    z-index: 20;
+  }
+}
+
+.about-text {
+  padding: 0 20px 20px;
+}
+
+.row.no-left {
+  margin-left: 0;
+}
+
+.navbar {
+  z-index: 10;
+  background-color: transparentize($black, .54);
+  height: 14.5vh;
+  border-radius: 0;
+  border: none;
+  margin-bottom: -14.5vh;
+}
+
+.navbar .navbar-nav > li > a {
+  color: $white;
+  line-height: 10vh;
+  position: relative;
+
+  &::before {
+    content: url('../images/Hover.png');
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: none;
+  }
+
+  &:hover {
+    color: $red;
+    background-color: transparent;
+
+    &::before {
+      display: block;
+    }
+  }
+}
+
+.navbar img {
+  height: 10vh;
+}
+
+.navbar-default .navbar-toggle {
+  border: 2px solid $red;
+  background: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $red;
+}
+
+.vcenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.twitter {
+  padding-top: 70px;
+  padding-bottom: 95px;
+  background-color: $red;
+  clip-path: polygon( 0 0, 100% 0, 100% calc(100% - 3vw), 0 100% );
+}
+
+.twitter-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.twitter-text-logo {
+  height: 380px;
+}
+
+.section-carousel {
+  position: relative;
+  background-color: $orange;
+  height: 100vh;
+  overflow: hidden;
+  clip-path: polygon( 0 0, 100% 0, 100% calc(100% - 3vw), 0 100% );
+}
+
+,
+.carousel,
+.inner-carousel {
+  height: 100%;
+}
+
+.mobile-header-image {
+  display: none;
+}
+
+.inner-carousel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.carousel-inner .one {
+  background: url("../images/slide_one.jpg") no-repeat center center fixed;
+}
+
+.carousel-inner .two {
+  background: url("../images/slide_two.jpg") no-repeat center center fixed;
+}
+
+.carousel-inner .three {
+  background: url("../images/slide_three.jpg") no-repeat center center fixed;
+}
+
+.carousel-inner .four {
+  background: url("../images/slide_four.jpg") no-repeat center center fixed;
+}
+
+.carousel .item {
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  width: 100%;
+  height: 700px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.indicators-container {
+  background-color: transparentize($black, .5);
+  height: 30vh;
+  width: 10vw;
+  position: absolute;
+  bottom: 0;
+  left: 16%;
+  margin: 0;
+  z-index: 5;
+}
+
+.indicators-top {
+  margin-top: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  & a:hover{
+    opacity: .75;
+  }
+}
+
+.carousel-indicators {
+  top: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  & .active{
+    background-color: $red;
+  }
+  & li{
+    background-color: $white;
+    border: none;
+  }
+
+}
+
+.slide-number-indicator {
+  font-size: 35px;
+  display: flex;
+  font-weight: lighter;
+  padding-right: 2px;
+}
+
+.slide-number {
+  font-size: 16px;
+
+  &.bottom {
+    align-self: flex-end;
+    padding-bottom: 4px;
+  }
+
+  &.top {
+    align-self: flex-start;
+    padding-top: 4px;
+  }
+}
+
+.carousel-logo {
+  position: absolute;
+  z-index: 25;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-logo img {
+  width: 60%;
+}
+
+.garces-portrait .col-sm-12 {
+  padding: 10px;
+}
+
+.signature {
+  width: 20%;
+}
+
+.footer {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 75px;
+  background-color: $white;
+  color: $black;
+
+  & h3 {
+    color: $red;
+    margin-top: 0;
+  }
+
+  & p {
+    font-weight: bold;
+  }
+
+  & .btn-garces {
+    background-color: $black;
+
+    &:hover {
+      background-color: lighten($black, 20%);
+    }
+  }
+
+  & a:hover {
+    background-color: lighten($black, 10%);
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.icons {
+  width: 100%;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: $black;
+  color: $white;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section-carousel {
+    height: 70vh;
+  }
+
+  .indicators-container {
+    height: 20vh;
+  }
+}
+@media only screen and (min-width: 570px) and (max-width: 767px) {
+  .section-carousel {
+    height: 60vh;
+  }
+
+  .indicators-container {
+    height: 18vh;
+    width: 15vw;
+    left: 10%;
+  }
+
+  .carousel-indicators {
+    top: auto;
+  }
+
+  .navbar {
+    background-color: $black;
+    margin-bottom: 14.6vh;
+
+    & .navbar-collapse {
+      margin-top: 5.6vh;
+      border: none;
+    }
+
+    & ul {
+      background-color: $black;
+    }
+  }
+
+  .navbar .navbar-nav > li > a::before {
+    top: -5px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 571px) {
+  .section-carousel {
+    background: url("../images/slide_one.jpg") no-repeat center center;
+    height: 40vh;
+    margin-top: 14.6vh;
+  }
+
+  .carousel {
+    display: none;
+  }
+
+  .navbar {
+    background-color: $black;
+    margin-bottom: 0;
+
+    & .navbar-collapse {
+      margin-top: 5.6vh;
+      border: none;
+    }
+
+    & ul {
+      background-color: $black;
+    }
+  }
+
+  .navbar .navbar-nav > li > a::before {
+    top: -5px;
+  }
+}
