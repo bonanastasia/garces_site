@@ -357,7 +357,7 @@ p {
   }
 
   & a:hover {
-    background-color: lighten($black, 10%);
+    background-color: $red;
     text-decoration: none;
     color: $white;
   }
@@ -387,9 +387,13 @@ p {
   .section-carousel {
     height: 70vh;
   }
+  .navbar .navbar-nav{
+    float: none !important;
+  }
   .navbar .navbar-nav > li > a{
-      line-height: 5vh;
+      line-height: 0;
       font-size: 1.10em;
+      margin-left: -12px;
     }
 
   .indicators-container {
@@ -425,8 +429,10 @@ p {
     margin: 0px -15px;
   }
   .navbar .navbar-nav > li > a{
-      line-height: 5vh;
-      font-size: 1em;
+    line-height: 0;
+    font-size: 1.10em;
+    margin-left: -12px;
+    padding-top: 0;
   &::before {
     top: -10px;
   }

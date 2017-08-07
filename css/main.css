@@ -6086,7 +6086,7 @@ p {
     .footer .btn-garces:hover {
       background-color: #333333; }
   .footer a:hover {
-    background-color: #1a1a1a;
+    background-color: #ec2327;
     text-decoration: none;
     color: #ffffff; }
 
@@ -6111,9 +6111,12 @@ p {
 @media (min-width: 768px) and (max-width: 1024px) {
   .section-carousel {
     height: 70vh; }
+  .navbar .navbar-nav {
+    float: none !important; }
   .navbar .navbar-nav > li > a {
-    line-height: 5vh;
-    font-size: 1.10em; }
+    line-height: 0;
+    font-size: 1.10em;
+    margin-left: -12px; }
   .indicators-container {
     height: 20vh; } }
 
@@ -6137,8 +6140,10 @@ p {
   .navbar-nav {
     margin: 0px -15px; }
   .navbar .navbar-nav > li > a {
-    line-height: 5vh;
-    font-size: 1em; }
+    line-height: 0;
+    font-size: 1.10em;
+    margin-left: -12px;
+    padding-top: 0; }
     .navbar .navbar-nav > li > a::before {
       top: -10px; } }
 
