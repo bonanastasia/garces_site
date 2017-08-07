@@ -5837,10 +5837,15 @@ h3 {
   font-size: 1.75em;
   line-height: 1.25em; }
 
+h4 {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 1.125em;
+  line-height: 1.222em; }
+
 p {
   font-family: "Franklin Gothic Medium", Arial, sans-serif;
-  font-size: 1em;
-  line-height: 1.375em; }
+  font-size: 1.50em;
+  line-height: 1.25em; }
 
 .fade-in {
   opacity: 0; }
@@ -5895,6 +5900,8 @@ p {
     height: 0;
     margin: 0 auto;
     z-index: 20; }
+  .about h3 {
+    color: #ec2327; }
 
 .about-text {
   padding: 0 20px 20px; }
@@ -5913,7 +5920,8 @@ p {
 .navbar .navbar-nav > li > a {
   color: #ffffff;
   line-height: 10vh;
-  position: relative; }
+  position: relative;
+  font-size: 1.20em; }
   .navbar .navbar-nav > li > a::before {
     content: url("../images/Hover.png");
     position: absolute;
@@ -5995,7 +6003,7 @@ p {
   -o-transition: opacity 1s;
   transition: opacity 1s;
   width: 100%;
-  height: 700px;
+  height: 100vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -6017,7 +6025,7 @@ p {
   flex-direction: row;
   justify-content: center; }
   .indicators-top a:hover {
-    opacity: .75; }
+    opacity: 0.75; }
 
 .carousel-indicators {
   top: 50%;
@@ -6068,7 +6076,7 @@ p {
   padding-bottom: 75px;
   background-color: #ffffff;
   color: #000000; }
-  .footer h3 {
+  .footer h4 {
     color: #ec2327;
     margin-top: 0; }
   .footer p {
@@ -6103,6 +6111,9 @@ p {
 @media (min-width: 768px) and (max-width: 1024px) {
   .section-carousel {
     height: 70vh; }
+  .navbar .navbar-nav > li > a {
+    line-height: 5vh;
+    font-size: 1.10em; }
   .indicators-container {
     height: 20vh; } }
 
@@ -6123,8 +6134,13 @@ p {
       border: none; }
     .navbar ul {
       background-color: #000000; }
-  .navbar .navbar-nav > li > a::before {
-    top: -5px; } }
+  .navbar-nav {
+    margin: 0px -15px; }
+  .navbar .navbar-nav > li > a {
+    line-height: 5vh;
+    font-size: 1em; }
+    .navbar .navbar-nav > li > a::before {
+      top: -10px; } }
 
 @media only screen and (min-width: 320px) and (max-width: 571px) {
   .section-carousel {
@@ -6141,5 +6157,10 @@ p {
       border: none; }
     .navbar ul {
       background-color: #000000; }
-  .navbar .navbar-nav > li > a::before {
-    top: -5px; } }
+  .navbar-nav {
+    margin: 0px -15px; }
+  .navbar .navbar-nav > li > a {
+    line-height: 5vh;
+    font-size: 1.1em; }
+    .navbar .navbar-nav > li > a::before {
+      top: -10px; } }

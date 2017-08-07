@@ -17,8 +17,7 @@ html {
 
 h1 {
   font-family: $font-family-display;
-  font-size: 8.313em;
-  line-height: 7.063em;
+  font-size: 3em;
 }
 
 h2 {
@@ -32,11 +31,16 @@ h3 {
   font-size: 1.75em;
   line-height: 1.25em;
 }
+h4{
+  font-family: $font-family-display;
+  font-size: 1.125em;
+  line-height: 	1.222em;
+}
 
 p {
   font-family: $font-family-text;
-  font-size: 1em;
-  line-height: 1.375em;
+  font-size: 1.50em;
+  line-height: 1.25em;
 }
 
 .fade-in {
@@ -111,6 +115,9 @@ p {
     margin: 0 auto;
     z-index: 20;
   }
+  & h3{
+    color: $red;
+  }
 }
 
 .about-text {
@@ -134,6 +141,7 @@ p {
   color: $white;
   line-height: 10vh;
   position: relative;
+  font-size: 1.20em;
 
   &::before {
     content: url('../images/Hover.png');
@@ -237,7 +245,7 @@ p {
   -o-transition: opacity 1s;
   transition: opacity 1s;
   width: 100%;
-  height: 700px;
+  height: 100vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -331,7 +339,7 @@ p {
   background-color: $white;
   color: $black;
 
-  & h3 {
+  & h4 {
     color: $red;
     margin-top: 0;
   }
@@ -379,6 +387,10 @@ p {
   .section-carousel {
     height: 70vh;
   }
+  .navbar .navbar-nav > li > a{
+      line-height: 5vh;
+      font-size: 1.10em;
+    }
 
   .indicators-container {
     height: 20vh;
@@ -388,17 +400,14 @@ p {
   .section-carousel {
     height: 60vh;
   }
-
   .indicators-container {
     height: 18vh;
     width: 15vw;
     left: 10%;
   }
-
   .carousel-indicators {
     top: auto;
   }
-
   .navbar {
     background-color: $black;
     margin-bottom: 14.6vh;
@@ -412,10 +421,16 @@ p {
       background-color: $black;
     }
   }
-
-  .navbar .navbar-nav > li > a::before {
-    top: -5px;
+  .navbar-nav {
+    margin: 0px -15px;
   }
+  .navbar .navbar-nav > li > a{
+      line-height: 5vh;
+      font-size: 1em;
+  &::before {
+    top: -10px;
+  }
+}
 }
 @media only screen and (min-width: 320px) and (max-width: 571px) {
   .section-carousel {
@@ -441,8 +456,14 @@ p {
       background-color: $black;
     }
   }
-
-  .navbar .navbar-nav > li > a::before {
-    top: -5px;
+  .navbar-nav {
+    margin: 0px -15px;
   }
+  .navbar .navbar-nav > li > a{
+      line-height: 5vh;
+      font-size: 1.1em;
+  &::before {
+    top: -10px;
+  }
+}
 }
